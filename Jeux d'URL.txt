@@ -1,0 +1,24 @@
+
+/******Jeux d'URL******\
+
+
+/client.php?action=list
+
+/client.php?action=read&code=CLI0001
+/client.php?action=read&code=CLI0002
+/client.php?action=read&code=CLI0003
+/client.php?action=read&code=CLI0004
+/client.php?action=read&code=CLI0005
+
+
+
+/bien.php?action=list
+
+/bien.php?action=read&code=LOC0001
+/bien.php?action=read&code=LOC0002
+/bien.php?action=read&code=LOC0003
+/bien.php?action=read&code=LOC0004
+/bien.php?action=read&code=LOC0005
+/bien.php?action=read&code=LOC0006
+/bien.php?action=read&code=LOC0007
+/bien.php?action=read&code=LOC0008
