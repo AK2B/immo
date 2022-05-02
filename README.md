@@ -101,10 +101,11 @@ robuste qu’il conviendra de définir.
 ## Réalisation attendue
 
 La réalisation portera sur les seuls éléments suivants :
-• Création de la base de données MySQL permettant de stocker les entités métier
-• Peuplement de la base de données « à la main » avec un jeu de test
-• Création des pages PHP auto-documentées précisées dans la partie
-« Spécifications fonctionnelles »
+
+- Création de la base de données MySQL permettant de stocker les entités métier
+- Peuplement de la base de données « à la main » avec un jeu de test
+- Création des pages PHP auto-documentées précisées dans la partie
+  « Spécifications fonctionnelles »
 
 ## Jeu de test
 
