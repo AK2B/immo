@@ -1,26 +1,32 @@
-Compétences évaluées
+# ECF-3
 
-## Activité-type 2
+> Visualiser le site
 
-5. Créer une base de données
-6. Développer les composants d’accès aux données
-7. Développer la partie back-end d’une application web ou web mobile
+## Gestion d’un parc locatif
+
+## Compétences évaluées
+
+### Activité-type
+
+- Créer une base de données
+- Développer les composants d’accès aux données
+- Développer la partie back-end d’une application web ou web mobile
 
 ## Contexte du projet
 
-Réaliser le back-end d’une application web, sous une approche « web services » destinés
-être appelés ultérieurement par un front-end pour le compte d’un organisme de gestion
-d’un parc locatif de locaux professionnels.
+> Réaliser le back-end d’une application web, sous une approche « web services » destinés
+> être appelés ultérieurement par un front-end pour le compte d’un organisme de gestion
+> d’un parc locatif de locaux professionnels.
 
 ## Charte graphique
 
-Néant. Aucun composant front-end n’est à développer.
+> Néant. Aucun composant front-end n’est à développer.
 
 ## Processus métier
 
-L’application web est destinée à gérer les entités métier du processus de gestion de la
-location de locaux professionnels. Les règles métier de l’organisme gestionnaire sont les
-suivantes :
+> L’application web est destinée à gérer les entités métier du processus de gestion de la
+> location de locaux professionnels. Les règles métier de l’organisme gestionnaire sont les
+> suivantes :
 
 - L’organisme est propriétaire de biens immobiliers qui sont caractérisés par :
   - une surface (en mètres carrés)
@@ -47,18 +53,15 @@ suivantes :
 
 ## Spécifications fonctionnelles
 
-Le back-end de l’application se présente sous la forme d’une API « web services »
-permettant de manipuler les entités du processus métier selon le modèle CRUD. L’API a
-donc pour but de lister, créer, modifier, supprimer et rechercher les entités métier.
-Techniquement, l’API est un jeu d’URL HTTP en méthode GET renvoyant des données au
-format JSON. Le format des URL à développer n’est pas standardisé mais correspond à
-une implémentation « propriétaire » interne à l’organisme. Le schéma suivant illustre le
-contexte technique.
+> Le back-end de l’application se présente sous la forme d’une API « web services » permettant de manipuler les entités du processus métier selon le modèle CRUD.  
+> L’API a donc pour but de lister, créer, modifier, supprimer et rechercher les entités métier.  
+> Techniquement, l’API est un jeu d’URL HTTP en méthode GET renvoyant des données au
+> format JSON.  
+> Le format des URL à développer n’est pas standardisé mais correspond à une implémentation « propriétaire » interne à l’organisme.  
+> Le schéma suivant illustre le
+> contexte technique.
 
-Dans un souci de simplification, seules les URL permettant de lister toutes les entités
-métier et de lire une entité particulière seront implémentées. Leur syntaxe, leurs
-paramètres dans la querystring, leur rôle et la structure du format JSON qu’elles
-retournent sont les suivants :
+> Dans un souci de simplification, seules les URL permettant de lister toutes les entités métier et de lire une entité particulière seront implémentées. Leur syntaxe, leurs paramètres dans la querystring, leur rôle et la structure du format JSON qu’elles retournent sont les suivants :
 
 - Lister toutes les entités
 
@@ -94,9 +97,7 @@ attributs métier du client CLI0001
 
 `{ "action": "read", "entity": "client", "data": { "code": "CLI0001", "nom": "Dev Corp", ... } }`
 
-Pour des questions de sécurité, le back-end se connectera à la base de données à l’aide
-du compte utilisateur applicatif « app_loc » disposant d’un mot de passe suffisamment
-robuste qu’il conviendra de définir.
+> Pour des questions de sécurité, le back-end se connectera à la base de données à l’aide du compte utilisateur applicatif « app_loc » disposant d’un mot de passe suffisamment robuste qu’il conviendra de définir.
 
 ## Réalisation attendue
 
@@ -109,10 +110,8 @@ La réalisation portera sur les seuls éléments suivants :
 
 ## Jeu de test
 
-Afin de tester l’application, il est demandé de saisir un jeu de données de 3 entités
-minimum pour chaque entité métier.
-Par ailleurs, il est demandé de fournir une URL d’exemple pour chaque scénario
-implémenté afin de tester le back-end.
+> Afin de tester l’application, il est demandé de saisir un jeu de données de 3 entités minimum pour chaque entité métier.
+> Par ailleurs, il est demandé de fournir une URL d’exemple pour chaque scénario implémenté afin de tester le back-end.
 
 ## Contraintes techniques
 
