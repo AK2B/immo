@@ -61,27 +61,10 @@ retournent sont les suivants :
 type donné présentes dans la base de données
 ➢ Format de l’URL d’appel : http://localhost/type-entite.php?action=list
 ➢ Format du JSON renvoyé :
-{
-"action": "list",
-"entity": "type-entite",
-"data": [
-"code-entite-1",
-"code-entite-2",
-…
-"code-entite-n"
-]
-}
+`{ "action": "list", "entity": "type-entite", "data": [ "code-entite-1", "code-entite-2", … "code-entite-n" ] }`
 ➢ Exemple : http://localhost/client.php?action=list liste tous les codes client en
 renvoyant le JSON suivant :
-{
-"action": "list",
-"entity": "client",
-"data": [
-"CLI0001",
-"CLI0002",
-...
-]
-}
+`{ "action": "list", "entity": "client", "data": [ "CLI0001", "CLI0002", ... ] }`
 ● Lire une entité
 ➢ Rôle : extraire tous les attributs métier propres à une entité d’un type donné d’après
 son code métier (dans un souci de simplification, on se limitera aux attributs
@@ -90,63 +73,60 @@ correspondant aux caractéristiques propres à l’entité définies dans la par
 clés primaires et étrangères)
 ➢ Format de l’URL d’appel : http://localhost/type-entite.php?action=read&code=xxxxx
 ➢ Format du JSON renvoyé :
-{
-"action": "read",
-"entity": "type-entite",
-"data": {
-"nom-attribut-1": "valeur-attribut-1",
-"nom-attribut-2": "valeur-attribut-2",
-...
-"nom-attribut-n": "valeur-attribut-n"
-}
-}
+`{ "action": "read", "entity": "type-entite", "data": { "nom-attribut-1": "valeur-attribut-1", "nom-attribut-2": "valeur-attribut-2", ... "nom-attribut-n": "valeur-attribut-n" } }`
 ➢ Exemple : http://localhost/client.php?action= read&code=CLI0001 liste tous les
 attributs métier du client CLI0001
-{
-"action": "read",
-"entity": "client",
-"data": {
-"code": "CLI0001",
-"nom": "Dev Corp",
-...
-}
-}
+`{ "action": "read", "entity": "client", "data": { "code": "CLI0001", "nom": "Dev Corp", ... } }`
 Pour des questions de sécurité, le back-end se connectera à la base de données à l’aide
 du compte utilisateur applicatif « app_loc » disposant d’un mot de passe suffisamment
 robuste qu’il conviendra de définir.
-Réalisation attendue
+
+## Réalisation attendue
+
 La réalisation portera sur les seuls éléments suivants :
 • Création de la base de données MySQL permettant de stocker les entités métier
 • Peuplement de la base de données « à la main » avec un jeu de test
 • Création des pages PHP auto-documentées précisées dans la partie
 « Spécifications fonctionnelles »
-Jeu de test
+
+## Jeu de test
+
 Afin de tester l’application, il est demandé de saisir un jeu de données de 3 entités
 minimum pour chaque entité métier.
 Par ailleurs, il est demandé de fournir une URL d’exemple pour chaque scénario
 implémenté afin de tester le back-end.
-Contraintes techniques
+
+## Contraintes techniques
+
 La réalisation devra impérativement respecter les contraintes suivantes :
-• Réalisation des pages PHP sans framework
-• Utilisation de PHP version 7.3 ou 7.4
-• Utilisation de MySQL version 5.6 ou 5.7
-• Sécurisation des paramètres des requêtes HTTP GET
-• Utilisation du connecteur PHP PDO pour les requêtes SQL
-• Sécurisation des requêtes SQL
-• Auto-documentation du code au format phpDocumentor (https://www.phpdoc.org/)
-• Respect des normes, règles et conventions de programmation back-end
-• Modularité et réutilisation du code PHP
-• Encapsulation de la connexion PDO au sein d’une classe en PHP destinée garantir
-l’unicité de la connexion à la base de donnée MySQL
-• Conformité de syntaxe du format JSON.
-La réalisation pourra éventuellement respecter les contraintes optionnelles suivantes :
-• Ecriture du code PHP en POO
-• Organisation du code PHP selon une architecture MVC.
-Livrable
+
+- Réalisation des pages PHP sans framework
+- Utilisation de PHP version 7.3 ou 7.4
+- Utilisation de MySQL version 5.6 ou 5.7
+- Sécurisation des paramètres des requêtes HTTP GET
+- Utilisation du connecteur PHP PDO pour les requêtes SQL
+- Sécurisation des requêtes SQL
+- Auto-documentation du code au format phpDocumentor (https://www.phpdoc.org/)
+- Respect des normes, règles et conventions de programmation back-end
+- Modularité et réutilisation du code PHP
+- Encapsulation de la connexion PDO au sein d’une classe en PHP destinée garantir
+
+### l’unicité de la connexion à la base de donnée MySQL
+
+- Conformité de syntaxe du format JSON.
+
+### La réalisation pourra éventuellement respecter les contraintes optionnelles suivantes :
+
+- Ecriture du code PHP en POO
+- Organisation du code PHP selon une architecture MVC.
+
+## Livrable
+
 Le livrable sera constitué des éléments suivants :
-• Un fichier zip comprenant l’arborescence du back-end PHP
-• Un deuxième fichier zip contenant le script de restauration de la base de données
-MySQL (structure, données de test et compte utilisateur) ainsi qu’une image
-correspondant au schéma relationnel physique de la base de données.
-• Un fichier texte nommé « test.txt » comportant ligne par ligne les URL de test
-Aucune documentation technique additionnelle n’est demandée.
+
+- Un fichier zip comprenant l’arborescence du back-end PHP
+- Un deuxième fichier zip contenant le script de restauration de la base de données
+  MySQL (structure, données de test et compte utilisateur) ainsi qu’une image
+  correspondant au schéma relationnel physique de la base de données.
+- Un fichier texte nommé « test.txt » comportant ligne par ligne les URL de test
+  Aucune documentation technique additionnelle n’est demandée.
